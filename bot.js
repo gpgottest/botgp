@@ -395,7 +395,6 @@ if (message.content === '_help') {
       .addField("**_roles :medal: **","**مسح محادثات الشات**")
       .addField("**_say :arrows_counterclockwise:**","**لـ يكرر الكلام اللى تقوله**")
       .addField("**_ask :writing_hand:**"," **بوت يجوبك علي اسالة**")
-      .addField("**_link :regional_indicator_l:**","**رابط دعم السيرفر**")
       .addField("**_Reverse :head_bandage:**","**اعكس الكلام**")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
