@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = '_'
 client.on('ready', () => {
-  client.user.setGame(`Bot Legends --> | _help`,'https://www.twitch.tv/By:A7MD');
+  client.user.setGame(`☤ bot 𝔾𝕻 ☤ --> | _help`,'https://www.twitch.tv/By:A7MD');
   console.log('BOT ONLINE');
 });
 
@@ -182,7 +182,7 @@ client.on('message', msg => {
 }
 });
 client.on('message', message => {
-    if (message.content.startsWith("link")) {
+    if (message.content.startsWith("_link")) {
 
   message.channel.createInvite({
         thing: true,
@@ -227,18 +227,6 @@ if (message.content.startsWith(prefix+"cv")) {
         }
 });
 
-client.on('message', message => {
-     if (message.content === "_inv") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#9B59B6")
-  .addField(" Done | تــــم" , " |  تــــم ارســالك في الخــاص")
-     
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 
 client.on('message', message => {
     if (message.author.id === client.user.id) return;
@@ -348,29 +336,6 @@ client.on('message',function(message) {
        message.channel.send(`channels: \`\`${client.channels.size}\`\``);
    } 
 });
-client.on('message', message => {
-    if (message.content === "_createroles") {
-    if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
-            if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_ROLES`` **Premission**`);
-
-                     message.guild.createRole({ name: "Owner", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Co-Owner", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Leader", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Co-Leader", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "King", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Qween", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "HighNiss", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Pros", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "VIP+", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "VIP", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Actve", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Members", color: "#ffffff", permissions: [] })
-        
-
-message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم صناعه الرتب **')
-}
-});
-
 
       client.on('message', async message => {
   if(message.content.startsWith(prefix + "voicesetup")) {
@@ -430,6 +395,7 @@ if (message.content === '_help') {
       .addField("**_roles :medal: **","**مسح محادثات الشات**")
       .addField("**_say :arrows_counterclockwise:**","**لـ يكرر الكلام اللى تقوله**")
       .addField("**_ask :writing_hand:**"," **بوت يجوبك علي اسالة**")
+      .addField("**_link :regional_indicator_l:**","**رابط دعم السيرفر**")
       .addField("**_Reverse :head_bandage:**","**اعكس الكلام**")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
@@ -446,11 +412,10 @@ if (message.content === '_help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
       .addField("**:radioactive: أوامر الأداره**","** **")
-      .addField("**_bc  :mega:**","**لـ البرودكاست**")
       .addField("**_clear :octagonal_sign:**","**لـ مسح الشات**")
       .addField("**_kick  :outbox_tray:**","**لـ طرد الأعضاء**")
       .addField("**_ban  :no_entry:**","**لـ حظر الأعضاء**")
-	  .addField("**_mute  :zipper_mouth:**","**لي اعطاء ميوت**")
+      .addField("**_mute  :zipper_mouth:**","**لي اعطاء ميوت**")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
